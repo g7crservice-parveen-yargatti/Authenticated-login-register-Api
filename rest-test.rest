@@ -1,0 +1,60 @@
+GET http://localhost:4000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijoiam95ZGlwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDU3NzYyOSwiZXhwIjoxNjcwNTc3OTI5fQ.dQw-pceYcOrY5Y3sDy5VH9uJ7TXUKR5SYyQCMIfZFak
+
+###
+GET http://localhost:4000/api/products/1
+
+###
+GET http://localhost:4000/api/products/100
+
+###
+POST http://localhost:4000/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijoiam95ZGlwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDU3MzU5NCwiZXhwIjoxNjcwNTczODk0fQ.mUGcWdmkVaZwb99FQ4gvppd0kkmgOqc24gC_4tCrEcA
+
+{   
+    "productName": "Test1",
+    "productCode": "GDN-0012",
+    "releaseDate": "March 19, 2016",
+    "description": "Test1",
+    "price": 600,
+    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png",
+    "starRating": 5
+}
+
+###
+PUT http://localhost:4000/api/products/6
+Content-Type: application/json
+
+{   
+    "productName": "Test11",
+    "productCode": "GDN-0012",
+    "releaseDate": "March 19, 2016",
+    "description": "Test11",
+    "price": 700,
+    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png",
+    "starRating": 5
+}
+
+###
+DELETE http://localhost:4000/api/products/6
+
+###
+
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{   
+    "username": "abcd@gmail.com",
+    "password": "Abcd@123"
+}
+
+###
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{   
+    "username": "joydip@gmail.com",
+    "password": "Joydip@123"
+}
+
